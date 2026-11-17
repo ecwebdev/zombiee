@@ -147,6 +147,7 @@ label{color:#bbb;font-size:14px;display:flex;gap:10px;align-items:center}
   <div class="sub">Survive the endless waves. Earn points, rebuild the barricades, open the door, and try your luck at the mystery box.</div>
   <div class="best" id="bestTxt"></div>
   <div class="keys" id="offline" style="color:#7fd88a"></div>
+  <div class="keys" style="opacity:.6">Version 4</div>
   <div class="row"><button class="btn" id="playBtn">Play</button><button class="btn alt" id="knivesBtn">Knives</button></div>
   <div class="keys" id="keysTouch">Left thumb: move (push all the way up to sprint) &middot; Right side: drag to look<br>Hold <b>Fire</b> while dragging to aim and shoot &middot; Tap the <b>weapon bar</b> to pull out your knife or a gun &middot; <b>Inspect</b> shows off your knife<br><b>Jump</b> onto crates &middot; <b>Use</b> appears near doors, guns, windows</div>
   <div class="keys" id="keysPC"><b>WASD</b> move &middot; <b>Shift</b> sprint &middot; <b>Mouse</b> look &middot; <b>Click</b> fire &middot; <b>Right-click</b> aim<br><b>Space</b> jump &middot; <b>R</b> reload &middot; <b>E</b> use (hold to rebuild) &middot; <b>1 / 2</b> guns &middot; <b>3</b> knife &middot; <b>Q</b> or wheel cycle &middot; <b>V</b> quick knife &middot; <b>F</b> inspect &middot; <b>Esc</b> pause</div>
@@ -183,7 +184,7 @@ label{color:#bbb;font-size:14px;display:flex;gap:10px;align-items:center}
 <script>
 (function(){try{
   if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)){
-    navigator.serviceWorker.register('./sw.js').catch(function(){});
+    navigator.serviceWorker.register('./sw.js').then(function(r){ try{ r.update(); }catch(e){} }).catch(function(){});
     navigator.serviceWorker.ready.then(function(){var o=document.getElementById('offline'); if(o) o.textContent='Saved on this device: works offline';}).catch(function(){});
   }
 }catch(e){}})();
