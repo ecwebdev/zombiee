@@ -1,5 +1,5 @@
 // Bump this version whenever you upload a new index.html so phones pick up the update.
-const CACHE = 'last-stand-v2';
+const CACHE = 'last-stand-v3';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', (e) => {
