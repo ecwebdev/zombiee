@@ -1,5 +1,5 @@
 // Bump this version whenever you upload a new index.html.
-const CACHE = 'last-stand-v13';
+const CACHE = 'last-stand-v14';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', (e) => {
