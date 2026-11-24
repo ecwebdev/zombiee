@@ -1,6 +1,6 @@
 {
-  "name": "Last Stand: Zombie Survival",
-  "short_name": "Last Stand",
+  "name": "Run: Zombie Escape",
+  "short_name": "Run",
   "start_url": "./",
   "scope": "./",
   "display": "fullscreen",
